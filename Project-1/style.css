@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #edf1fd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+li{
+    list-style: none;
+    cursor: pointer;
+    
+}
+
+a{
+    /* text-decoration: none; */
+    width: 100px;
+    height: 100px;
+}
+
+button{
+    background-color: rgb(8, 123, 100);
+    padding: 4px 10px;
+    margin: 0px 0px 0px 5px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgba(5, 69, 103, 0.724);
+    border-radius: 10px;
+    font-weight: 600;
+    width: fit-content;
+}
+header{
+    padding: 10px 2px;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav .logo{
+    font-weight: 700;
+    font-size: 25px;
+
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-weight: 500px;
+}
+
+nav ul li:hover{
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+.search-field{
+    display: flex;
+    gap: 10;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    padding:4px 5px ;
+}
+
+.Page-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-left-section {
+    font-size: 30px;
+    margin-bottom: 20px;
+    /* padding: 20px; */
+    font-weight: 700;
+}
+
+.page-left-section h1 span {
+    color: rgba(8, 211, 211, 0.989);
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+.page-left-section p {
+    font-weight: 500;
+}
+
+.page-left-section p span {
+    font-weight: 700;
+    font-size: 25px;
+    color:rgba(8, 211, 211, 0.989);
+}
+
+.page-right-section {
+    display: flex;
+    flex-direction:column;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.page-right-section-button {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.page-right-section img {
+    /* display: flex;
+    align-items: center; */
+    width: 60%;
+    height: 6   0%;
+    border-radius: 50%;
+
+}
+
+footer{
+    display: flex;
+    font-weight: 600;
+    align-items:center;
+    padding: 20px 0;
+    justify-content: space-around;
+}
+
+footer p {
+    font-weight: 700;
+    font-weight: 50px   ;
+
+}
+
+footer ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    
+}
+
+

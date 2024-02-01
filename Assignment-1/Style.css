@@ -1,0 +1,107 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* background-color: #1bd487; */
+    
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Assets/BGC.png);
+    background-size: cover;
+    background-attachment:fixed;
+}
+/* ------------------------------ */
+/* ---------- NAVBAR ------------ */
+/* ------------------------------ */
+
+.navbar{
+    display: flex;
+    margin-right: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px 0 50px;
+    margin-top: 30px;
+    
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    gap: 63px;
+    margin: 0px 50px 0px 50px;
+    list-style: none;
+    font-family: "Red Rose";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 22px;
+    color: #ffc233;
+    cursor: pointer;
+}
+
+.logo{
+  cursor: pointer;
+  margin-right: 0px;
+  
+  
+}
+
+.button-small {
+    padding: 12px 40px;
+    background-color: #ff505f;
+    border: none;
+    font-family: "Red Rose";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    
+  }
+/* ------------------------------ */
+/* ---------- Main ------------ */
+/* ------------------------------ */
+
+.main {
+    max-width: 1154px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  h1 {
+    font-family: "Dela Gothic One", cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 104px;
+    line-height: 114px;
+    /* or 110% */
+    color: #ffc233;
+  }
+  
+  .button-large {
+    background: #ff505f;
+    font-family: "Red Rose";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 30px;
+    color: #ffffff;
+    border: none;
+    padding: 24px 56px;
+    margin-top: 60px;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+  
+  .bottom {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+  }
+
+  
