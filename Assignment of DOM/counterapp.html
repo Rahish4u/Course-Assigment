@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Counter App</title>
+    <style>
+      .container {
+        text-align: center;
+        margin-top: 100px;
+        border: 1px solid black;
+        margin: 10px 150px;
+        padding: 10px 20px;
+        background: #0ff3c9;
+      }
+
+      #counter {
+        font-size:  40px;
+        margin-bottom: 20px;
+       
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 10px 10px;
+        cursor: pointer;
+        color: rgb(228, 228, 235);
+        border-radius: 50% ;
+        border: 2px solid red;
+        background: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Counter App</h1>
+      <div id="counter">0</div>
+      <button class="btn" id="incrementBtn">+1</button>
+      <button class="btn" id="decrementBtn">-1</button>
+      <button class="btn" id="resetBtn">Reset</button>
+    </div>
+
+    <script>
+      // Get the counter element
+      var counterElement = document.getElementById("counter");
+
+      // Get the buttons
+      var incrementBtn = document.getElementById("incrementBtn");
+      var decrementBtn = document.getElementById("decrementBtn");
+      var resetBtn = document.getElementById("resetBtn");
+
+      // Set initial counter value
+      var counter = 0;
+
+      // Function to update the counter element
+      function updateCounter() {
+        counterElement.textContent = counter;
+      }
+
+      // Function to handle increment button click
+      incrementBtn.addEventListener("click", function () {
+        counter += 1;
+        updateCounter();
+      });
+
+      // Function to handle decrement button click
+      decrementBtn.addEventListener("click", function () {
+        counter -= 1;
+        updateCounter();
+      });
+
+      // Function to handle reset button click
+      resetBtn.addEventListener("click", function () {
+        counter = 0;
+        updateCounter();
+      });
+
+      // Initial counter update
+      updateCounter();
+    </script>
+  </body>
+</html>
