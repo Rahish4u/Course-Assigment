@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oneclick</title>
+
+    <style>
+        body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#box {
+  width: 20rem;
+  background-color: green;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 25px;
+}
+    </style>
+</head>
+<body>
+    <div id="box">
+        <p class="clickMe">Click me 👇</p>
+    </div>
+</body>
+<script>
+   // click event
+
+// An element receives a click event when a pointing device button (such as a mouse's primary mouse button)
+//  is both pressed and released while the pointer is located inside the element.
+
+// If the button is pressed on one element and the pointer is moved outside the element before the button is released,
+//  the event is fired on the most specific ancestor element that contained both elements.
+
+const boxElement = document.getElementById("box");
+
+// add a click event listener to the element
+boxElement.addEventListener("click", function () {
+  alert("you just clicked me 👍");
+}); 
+</script>
+</html>

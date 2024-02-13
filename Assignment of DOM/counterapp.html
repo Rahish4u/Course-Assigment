@@ -3,79 +3,100 @@
   <head>
     <title>Counter App</title>
     <style>
-      .container {
-        text-align: center;
-        margin-top: 100px;
-        border: 1px solid black;
-        margin: 10px 150px;
-        padding: 10px 20px;
-        background: #0ff3c9;
+      * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        box-sizing: border-box;
       }
 
-      #counter {
-        font-size:  40px;
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #a7ac9e;
+      }
+
+      
+      /* Designing the counter Container*/
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        box-shadow: 0 0 5px black;
+        padding: 20px;
+        border-radius: 10px;
+        background: #09d8d8;
+      }
+
+      .counter {
+        font-size: 35px;
         margin-bottom: 20px;
-       
+        text-align: center;
       }
 
       .btn {
-        padding: 10px 20px;
+        padding: 5px 15px;
+        font-weight: bold;
         font-size: 16px;
-        margin: 10px 10px;
-        cursor: pointer;
-        color: rgb(228, 228, 235);
-        border-radius: 50% ;
-        border: 2px solid red;
-        background: black;
+      }
+
+      #displayValue {
+        font-size: 25px;
+        padding: 5px 15px;
+        border: 1px solid black;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>Counter App</h1>
-      <div id="counter">0</div>
-      <button class="btn" id="incrementBtn">+1</button>
-      <button class="btn" id="decrementBtn">-1</button>
+      <!--For the counter app card-->
+      <h1 class="counter">Counter App</h1>
+      <div>
+        <button class="btn" id="incrementBtn">Increment by 1</button>
+        <span id="displayValue">0</span>
+        <button class="btn" id="decrementBtn">Decrement by 1</button>
+      </div>
+      <!-- button to reset the value -->
       <button class="btn" id="resetBtn">Reset</button>
     </div>
 
     <script>
-      // Get the counter element
-      var counterElement = document.getElementById("counter");
+     // Getting the HTML element
+     const decrementBtn = document.getElementById("decrementBtn")
+     const incrementBtn = document.getElementById("incrementBtn")
+     const resetBtn = document.getElementById("resetBtn")
+     const displayValue = document.getElementById("displayValue")
 
-      // Get the buttons
-      var incrementBtn = document.getElementById("incrementBtn");
-      var decrementBtn = document.getElementById("decrementBtn");
-      var resetBtn = document.getElementById("resetBtn");
-
-      // Set initial counter value
-      var counter = 0;
-
-      // Function to update the counter element
-      function updateCounter() {
-        counterElement.textContent = counter;
+     // For decrement button click
+     decrementBtn.addEventListener("click", () =>{
+      const value = Number(displayValue.innerText);
+      if (value > 0) {
+        displayValue.innerText = value - 1;
+      } else{
+        alert("Negative value not allowed")
       }
+     })
 
-      // Function to handle increment button click
-      incrementBtn.addEventListener("click", function () {
-        counter += 1;
-        updateCounter();
-      });
+     // Foe increment button click
 
-      // Function to handle decrement button click
-      decrementBtn.addEventListener("click", function () {
-        counter -= 1;
-        updateCounter();
-      });
+     incrementBtn.addEventListener("click", () => {
+      const value = Number(displayValue.innerText);
+      if (value >= 100) {
+        alert("100+ values are not allowed")
+      }else{
 
-      // Function to handle reset button click
-      resetBtn.addEventListener("click", function () {
-        counter = 0;
-        updateCounter();
-      });
+      }displayValue.innerText = value + 1;
+     })
 
-      // Initial counter update
-      updateCounter();
+     // for reset button click
+
+     resetBtn.addEventListener("click", () => {
+      displayValue.innerText = 0;
+     })
+
     </script>
   </body>
 </html>
