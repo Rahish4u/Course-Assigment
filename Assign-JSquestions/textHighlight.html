@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Highlighting</title>
+    <style>
+      .highlighted {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="paragraph">
+      OpenAI`s artificial intelligence model GPT-4 has the capability to hack
+      websites and steal information from online databases without human help,
+      researchers have found. That suggests individuals or organisations. Lorem
+      ipsum, dolor sit amet consectetur adipisicing elit. Nobis libero quod,
+      consectetur commodi quisquam dolorem odit sint? Vero, quos? Et.
+    </p>
+
+    <script>
+      // Select the paragraph element
+      let p = document.querySelector("p");
+
+      // Split the paragraph text into words
+      let words = p.innerText.split(" ");
+
+      // Iterate over each word
+      for (let i = 0; i < words.length; i++) {
+        // If the word length is greater than 8
+        if (words[i].length > 8) {
+          // Replace the word with the highlighted version
+          words[i] =
+            '<span style="background-color: yellow;">' + words[i] + "</span>";
+        }
+      }
+
+      // Join the words back together and replace the paragraph text
+      p.innerHTML = words.join(" ");
+    </script>
+  </body>
+</html>

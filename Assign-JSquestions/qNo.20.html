@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add List Items Dynamically</title>
+</head>
+<body>
+    <h2>What will you learn!</h2>
+    <ol>
+        <li>HTML and Semantics</li>
+        <li>Starting with CSS</li>
+        <li>Working Template</li>
+        <li>Mobile responsive webpages</li>
+       
+       
+    </ol>
+
+    <button id="addListItemButton">Add Next Item</button>
+
+    <script>
+        // Pre-existing array of list items
+        const listItemsArray = [
+            "HTML and Semantics",
+            "Starting with CSS",
+            "Working Template",
+            "Mobile responsive webpages",
+            "Grid and Flex-box in CSS",
+            "Projects using HTML & CSS",
+            "Version Control and Git",
+            "Getting Started with JavaScript",
+            "Advance JavaScript",
+            "Working with DOM",
+            "Making Projects using HTML, CSS and JavaScript",
+            "Understanding Fundamental of Computer Science",
+            "Getting Started with Database",
+            "Understanding the Database",
+            "Starting with NodeJS and Express",
+            "Understanding React and its Fundamentals",
+            "Understanding Hooks and Routers",
+            "Starting and Completing Full Fledge Projects"
+        ];
+
+        // Function to add a new list item to the ordered list
+        function addListItem() {
+            const olElement = document.querySelector('ol');
+            const remainingItems = listItemsArray.slice(olElement.children.length);
+
+            if (remainingItems.length > 0) {
+                const newItem = document.createElement('li');
+                newItem.textContent = remainingItems[0];
+                olElement.appendChild(newItem);
+            } else {
+                alert("All items have been added.");
+            }
+        }
+
+        // Find the button and attach the click event listener
+        const addButton = document.getElementById('addListItemButton');
+        addButton.addEventListener('click', addListItem);
+    </script>
+</body>
+</html>

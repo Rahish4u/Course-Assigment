@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO App</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #ecf0f3;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 400px;
+        background-color: #ef0f5a;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        text-align: center;
+        color: #f5e8e8;
+        margin: 10px 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      input[type="text"] {
+        width: calc(100% - 80px);
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
+
+      button {
+        width: 100px;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      .todo-item {
+        padding: 10px;
+        background-color: #f2f2f2;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .todo-item:hover {
+        background-color: #e5e5e5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>TODO App</h1>
+      <div>
+        <input type="text" id="todo-input" placeholder="Enter your TODO" />
+        <button onclick="addTodo()">Add TODO</button>
+      </div>
+      <div id="todo-list"></div>
+    </div>
+
+    <script>
+      function addTodo() {
+        var todoInput = document.getElementById("todo-input");
+        var todoText = todoInput.value.trim();
+        if (todoText !== "") {
+          var todoList = document.getElementById("todo-list");
+          var todoItem = document.createElement("div");
+          todoItem.className = "todo-item";
+          todoItem.textContent = todoText;
+          todoList.appendChild(todoItem);
+          todoInput.value = "";
+        } else {
+          alert("Please enter a valid TODO");
+        }
+      }
+    </script>
+  </body>
+</html>

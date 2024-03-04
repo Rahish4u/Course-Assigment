@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move the Image</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #myImage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <img id="myImage" src="https://images.pexels.com/photos/336232/pexels-photo-336232.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Movable Image">
+
+    <script>
+        const image = document.getElementById('myImage');
+        let currentX = 0;
+        let currentY = 0;
+        const speed = 5; // Adjust speed as desired
+
+        document.addEventListener('keydown', (event) => {
+            const key = event.key;
+
+            switch (key) {
+                case 'ArrowUp':
+                    currentY -= speed;
+                    break;
+                case 'ArrowDown':
+                    currentY += speed;
+                    break;
+                case 'ArrowLeft':
+                    currentX -= speed;
+                    break;
+                case 'ArrowRight':
+                    currentX += speed;
+                    break;
+                default:
+                    break;
+            }
+
+            // Prevent image from going off screen (optional)
+            image.style.top = `${currentY}px`;
+            image.style.left = `${currentX}px`;
+        });
+    </script>
+</body>
+</html>

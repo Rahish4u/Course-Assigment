@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Change on Button Click</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #77e3c8;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">The most affordable learning platform</h1>
+    <button id="toggleButton">Click Here</button>
+
+    <script>
+      // Get references to the heading and button elements
+      const heading = document.getElementById("heading");
+      const toggleButton = document.getElementById("toggleButton");
+
+      // Function to toggle the text of the heading
+      function toggleText() {
+        if (heading.textContent === "The most affordable learning platform") {
+          heading.textContent = "PW Skills";
+        } else {
+          heading.textContent = "The most affordable learning platform";
+        }
+      }
+
+      // Add event listener to the button to toggle text on click
+      toggleButton.addEventListener("click", toggleText);
+    </script>
+  </body>
+</html>
